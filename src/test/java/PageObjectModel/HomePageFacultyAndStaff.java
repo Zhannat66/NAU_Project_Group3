@@ -9,18 +9,16 @@ import org.openqa.selenium.By;
 public class HomePageFacultyAndStaff {
 
 
-    @Given("^User navigates to NAU website$")
-    public void user_navigates_to_NAU_website() throws Throwable {
-           Base.getDriver();
-    }
-
-    @When("^NAU dashboard appears$")
-    public void nau_dashboard_appears() throws Throwable {
-
-    }
-
-    @Then("^User should see following \"([^\"]*)\"$")
-    public void user_should_see_following(String arg1) throws Throwable {
-
-    }
+public void verifyIfMainPageIsDisplayed(){
+    String givenUrl = "http://qatest2119.na.edu/";
+    String actualUrl = "";
 }
+
+public
+public void isFacultyAndStaffDisplayed(){
+
+}
+
+
+}
+

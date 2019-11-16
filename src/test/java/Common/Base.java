@@ -14,7 +14,7 @@ import java.util.Properties;
 
         public static WebDriver getDriver() throws IOException {   //method to get driver - browser
             prop = new Properties();     // initiating object
-            FileInputStream fis = new FileInputStream("C:/Users/zhanna/IdeaProjects/NAUProjectGroup3/src/test/java/Common/global.properties");
+            FileInputStream fis = new FileInputStream("C:/Users/zhanna/Desktop/NAUProjectGroup3/src/test/java/Common/global.properties");
             prop.load(fis);
 
             WebDriverManager.chromedriver().setup();
