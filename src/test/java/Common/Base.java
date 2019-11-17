@@ -14,12 +14,12 @@ import java.util.Properties;
 
         public static WebDriver getDriver() throws IOException {   //method to get driver - browser
             prop = new Properties();     // initiating object
-            FileInputStream fis = new FileInputStream("C:/Users/zhanna/IdeaProjects/NAUProjectGroup3/src/test/java/Common/global.properties");
+            FileInputStream fis = new FileInputStream("C:/Users/18327/Desktop/YEDEK-master/YEDEK-master/NAU_Project_Group3/src/test/java/Common/global.properties");
             prop.load(fis);
 
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-            driver.get(prop.getProperty("url"));
+            driver.get(prop.getProperty("urlcampus"));
             return driver;
         }
 
