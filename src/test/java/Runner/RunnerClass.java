@@ -6,7 +6,8 @@ import org.junit.runner.RunWith;
 
     @RunWith(Cucumber.class)
     @CucumberOptions(features = "src/test/java/FeatureFiles",
-                     glue = "StepDefenition")
+                     tags = {"@last"},
+                     glue = "StepDefinition")
 
     public class RunnerClass {
 

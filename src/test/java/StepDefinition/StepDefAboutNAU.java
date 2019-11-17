@@ -1,4 +1,4 @@
-package StepDefenition;
+package StepDefinition;
 
 public class StepDefAboutNAU {
 }

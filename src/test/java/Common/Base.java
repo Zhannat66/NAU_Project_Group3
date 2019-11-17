@@ -21,6 +21,8 @@ import java.util.Properties;
             driver = new ChromeDriver();
             driver.get(prop.getProperty("url"));
             return driver;
+
+
         }
 
     }
