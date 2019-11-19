@@ -10,8 +10,9 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 
-public class StepDefCampusLife extends Base{
+public class StepDefCampusLife extends Base {
     HomePageCampusLife cam;
+
     @Given("^User will navigate to the website$")
     public void user_will_navigate_to_the_website() throws Throwable {
         Base.getDriver();
@@ -19,9 +20,9 @@ public class StepDefCampusLife extends Base{
 
     @When("^User searches for Student Services section$")
     public void user_searches_for_Student_Services_section() throws Throwable {
-        cam=new HomePageCampusLife();
+        cam = new HomePageCampusLife();
         cam.getSearchCamp().click();
-        Thread.sleep(3000);
+
     }
 
     @Then("^The \"([^\"]*)\" menu and pop-up menu displayed$")
@@ -31,7 +32,7 @@ public class StepDefCampusLife extends Base{
 
     @When("^User searches for Student Organizations part$")
     public void user_searches_for_Student_Organizations_part() throws Throwable {
-        cam=new HomePageCampusLife();
+        cam = new HomePageCampusLife();
         cam.getOrganizat().click();
         Thread.sleep(2000);
 //        driver.manage().window().maximize();
@@ -39,44 +40,98 @@ public class StepDefCampusLife extends Base{
 
     @Then("^The sub-items of the \"([^\"]*)\" menu will be open$")
     public void the_sub_items_of_the_menu_will_be_open(String arg1) throws Throwable {
-       Assert.assertTrue(cam.getOrganizat().getText().contains(arg1));
+        Assert.assertTrue(cam.getOrganizat().getText().contains(arg1));
     }
+
     @When("^User searches for Calender of Events part$")
     public void user_searches_for_Calender_of_Events_part() throws Throwable {
-        cam=new HomePageCampusLife();
+        cam = new HomePageCampusLife();
         cam.getEvents().click();
     }
+
     @Then("^The Calender of Events part will be displayed$")
     public void the_Calender_of_Events_part_will_be_displayed() throws Throwable {
         System.out.println("The Calender of Events part is displayed");
     }
+
     @When("^User searches for Health Services part$")
     public void user_searches_for_Health_Services_part() throws Throwable {
-   cam= PageFactory.initElements(Base.driver,HomePageCampusLife.class);
-   cam.getHealthServices();
+        cam = PageFactory.initElements(Base.driver, HomePageCampusLife.class);
+        cam.getHealthServices();
     }
+
     @Then("^The Health Services part will be open$")
     public void the_Health_Services_part_will_be_open() throws Throwable {
         System.out.println("The Health Services Part will be displayed");
 
     }
+
     @When("^User searches for Dining at NAU part$")
     public void user_searches_for_Dining_at_NAU_part() throws Throwable {
-        cam=PageFactory.initElements(Base.driver,HomePageCampusLife.class);
+        cam = PageFactory.initElements(Base.driver, HomePageCampusLife.class);
         cam.getDiningatNau();
     }
+
     @Then("^The Dining at Nau part will be appear$")
     public void the_Dining_at_Nau_part_will_be_appear() throws Throwable {
         System.out.println("DINING MENU APPEARED");
     }
+
     @When("^User searches for Parking and Transportation part$")
     public void user_searches_for_Parking_and_Transportation_part() throws Throwable {
-        cam=new HomePageCampusLife();
+        cam = new HomePageCampusLife();
         cam.getParkingTrans();
     }
+
     @Then("^The Parking Nad Transportation part will be displayed$")
     public void the_Parking_Nad_Transportation_part_will_be_displayed() throws Throwable {
         System.out.println("Parking and Transportation will be appeared");
     }
 
+    @When("^User searches for Emergency Guide part$")
+    public void user_searches_for_Emergency_Guide_part() throws Throwable {
+        cam=new HomePageCampusLife();
+        cam.getEmergency();
+
     }
+
+    @Then("^The Emergancy Guide will be open$")
+    public void the_Emergancy_Guide_will_be_open() throws Throwable {
+        System.out.println("Emeregncy guide will be open");
+
+    }
+
+    @When("^User searches for Campus Security section$")
+    public void user_searches_for_Campus_Security_section() throws Throwable {
+       cam= PageFactory.initElements(Base.driver,HomePageCampusLife.class);
+       cam.getCampusSecurity();
+           }
+
+    @Then("^The Campus Security section will be appear$")
+    public void the_Campus_Security_section_will_be_appear() throws Throwable {
+        System.out.println("Campus Security section will be open");
+    }
+    @When("^User searches for Srvice Request menu$")
+    public void user_searches_for_Srvice_Request_menu() throws Throwable {
+       cam=new HomePageCampusLife();
+       cam.getServiceRequest();
+    }
+
+
+    @Then("^The Service Request menu will be appear$")
+    public void the_Service_Request_menu_will_be_appear() throws Throwable {
+        System.out.println("Srvice Request Part Appeared");
+    }
+    @When("^User searches for Housing part$")
+    public void user_searches_for_Housing_part() throws Throwable {
+       cam=PageFactory.initElements(Base.driver,HomePageCampusLife.class);
+       cam.getHousingPart();
+    }
+
+    @Then("^The Housing part will be open$")
+    public void the_Housing_part_will_be_open() throws Throwable {
+        System.out.println("Housing part will be appear");
+    }
+
+
+}

@@ -32,9 +32,33 @@ public class HomePageCampusLife extends Base {
     public void getDiningatNau(){
         diningatNau.click();
     }
- public By parkingTrans=By.xpath("//a[text()='Parking & Transportation']");
+    public By parkingTrans=By.xpath("//a[text()='Parking & Transportation']");
     public WebElement getParkingTrans(){
         return driver.findElement(parkingTrans);
     }
+    public By emergencyGuide=By.xpath("//a[text()='Emergency Guide']");
+    public WebElement getEmergency(){
+        return driver.findElement(emergencyGuide);
+    }
+    @FindBy(xpath = "//a[text()='Campus Security']")
+    public WebElement campusSecurity;
+    public void getCampusSecurity(){
+        campusSecurity.click();
+    }
+    /*@FindBy(xpath ="//a[text()='Serviv=ce Request']")
+    public WebElement serviceRequest;
+    public void getServiceRequest(){
+        serviceRequest.click();
+    }*/
+    public By serviceRequest=By.xpath("//a[text()='Service Request']");
+    public WebElement getServiceRequest(){
+        return driver.findElement(serviceRequest);
+    }
+    @FindBy(xpath = "//a[text()='Housing']")
+    public WebElement housingPart;
+    public void getHousingPart(){
+        housingPart.click();
+    }
 
-}
+   }
+

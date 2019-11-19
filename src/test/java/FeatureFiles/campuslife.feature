@@ -20,7 +20,7 @@ Feature: User is going to search for Campus Life page under the home page of NAU
          When User searches for Health Services part
          Then The Health Services part will be open
 
-         Scenario: Search for Health Services sub-items of Student Services under the Campus life
+         Scenario: Search for Dining part sub-items of Student Services under the Campus life
            Given User will navigate to the website
            When User searches for Dining at NAU part
            Then The Dining at Nau part will be appear
@@ -34,6 +34,23 @@ Feature: User is going to search for Campus Life page under the home page of NAU
                Given User will navigate to the website
                When User searches for Emergency Guide part
                Then The Emergancy Guide will be open
+
+               Scenario:  Search for Campus Security sub-items of Student Services under the Campus life
+                 Given User will navigate to the website
+                 When User searches for Campus Security section
+                 Then The Campus Security section will be appear
+
+                 Scenario: Search for Service Request sub-items of Student Services under the Campus life
+                   Given User will navigate to the website
+                   When User searches for Srvice Request menu
+                   Then The Service Request menu will be appear
+
+                   Scenario: Search for Housing sub-items of Student Services under the Campus life
+                     Given User will navigate to the website
+                     When User searches for Housing part
+                     Then The Housing part will be open
+
+
 
 
 
