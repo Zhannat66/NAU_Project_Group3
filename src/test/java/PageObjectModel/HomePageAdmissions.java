@@ -26,6 +26,10 @@ public class HomePageAdmissions
     public By graduateTuition = By.xpath("//*[@id=\"menu-item-2341\"]/a/span");
     public By graduateDistance = By.xpath("//*[@id=\"menu-item-2341\"]/a/span");
     public By graduateInternational = By.xpath("//*[@id=\"menu-item-2481\"]/a/span");
+    public By underGraduateAll = By.xpath("//ul[starts-with(@class,'ubermenu-submenu ubermenu-submenu-id-1754')]");
+    public By login365=By.xpath("//*[@id=\"menu-item-103\"]/a/span");
+    public By userName=By.xpath("//*[@id='i0116']");
+    public By firstSubmit=By.xpath("//*[@id=\"idSIButton9\"]");
 
 
     public WebDriver closingPage() {
@@ -34,38 +38,40 @@ public class HomePageAdmissions
     }
 
 
+    //////////Scenario-1////////
     public WebElement hoverOverAdmissions() {
-
         return driver.findElement(admissionLocator);
     }
-
     public Actions sections() {
         Actions act = new Actions(driver);
         act.moveToElement(driver.findElement(admissionLocator)).build().perform();
         return act;
     }
-
     public WebElement image() {
 
         return driver.findElement(imageLocator);
     }
-
+      ////Scenario-2////
     public WebElement checkingUndergraduate() {
 
         return driver.findElement(undergraduate);
     }
-
+     //////Scenario-3///////
     public WebElement checkingGraduate() {
 
         return driver.findElement(graduate);
     }
+      //////Scenario-4/////////
+    public Actions checkingGulfSchool() {
 
-    public WebElement checkingGulfSchool() {
-
-        return driver.findElement(gulfLanguageSchool);
+        driver.findElement(gulfLanguageSchool);
+        Actions act = new Actions(driver);
+      act.moveToElement(driver.findElement(gulfLanguageSchool)).build().perform();
+        return  act;
     }
-
+    /////////Scenario-5-A//////////
     public WebElement hoveringAdmission() {
+
         return driver.findElement(hoverAdmission);
     }
 
@@ -90,7 +96,7 @@ public class HomePageAdmissions
     public WebElement checkingInternational() {
         return driver.findElement(undergradInternational);
     }
-
+ //////Scenario-5-B///////
     public WebElement checkingApplyNow() {
         return driver.findElement(graduateApplyNow);
     }
@@ -105,12 +111,47 @@ public class HomePageAdmissions
     }
 
     public WebElement checkingGraduateDistance() {
+
         return driver.findElement(graduateDistance);
     }
 
     public WebElement checkingGraduateInternational() {
         return driver.findElement(graduateInternational);
     }
+    public  By gulfApply=By.xpath("//*[@id='menu-item-2482']/a/span");
+    public WebElement checkGulfApply(){
+
+        return driver.findElement(gulfApply);
+    }
+    public By GlsAdmin=By.xpath("//*[@id='menu-item-2483']/a/span");
+    public WebElement gLSAdmission(){
+
+        return driver.findElement(GlsAdmin);
+    }
+
+
+    public By gulfAdmission=By.xpath("//span[contains(text(),'Admissions')]");
+    public Actions hoverOverGulfAdmission(){
+        Actions myActions=new  Actions(driver);
+        myActions.moveToElement(driver.findElement(gulfAdmission)).build().perform();
+        return myActions;
+    }
+    public WebElement clickingGLSAdmission(){
+        return driver.findElement(gulfAdmission);
+    }
+    public WebElement clickingLogin(){
+        return driver.findElement(login365);
+    }
+    public WebElement writingUsername(){
+        return driver.findElement(userName);
+    }
+    public WebElement submittingParameter(){
+        return driver.findElement(firstSubmit);
+    }
+
+
+
+
 }
 
 

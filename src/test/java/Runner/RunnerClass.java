@@ -6,14 +6,9 @@ import org.junit.runner.RunWith;
 
   @RunWith(Cucumber.class)
     @CucumberOptions(features = "src/test/java/FeatureFiles/admissions.feature",
-            tags={"@14"},
+            tags={"@20"},
             glue = "StepDefenition",
-
-
-
               dryRun=false
     )
-
     public class RunnerClass {
-
-    }
+  }
