@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
         public static WebDriver getDriver() throws IOException {
 
             prop=new Properties();
-            FileInputStream fis=new FileInputStream("C:\\Users\\aozde\\IdeaProjects\\NAU_Project_Group3\\src\\test\\java\\Common\\global.properties" );
+            FileInputStream fis=new FileInputStream("C:\\Users\\mrjer\\IdeaProjects\\NAU_Project_Group3\\src\\test\\java\\Common\\global.properties" );
             prop.load(fis);
 
             WebDriverManager.chromedriver().setup();
