@@ -26,3 +26,5 @@ import java.util.Properties;
     }
 
 
+////global properties bolumunu buraya yazdim:
+// urlcampus = http://qatest2119.na.edu/campus-life/
