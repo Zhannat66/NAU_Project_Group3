@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="NAUProjectGroup3" />
+        <module name="NAU_Project_Group3" />
       </profile>
     </annotationProcessing>
   </component>
